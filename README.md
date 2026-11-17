@@ -5,14 +5,15 @@
 ## Grup
 
 | Üye | Öğrenci no |
-|264329400|Hakan Arik|
-|264309004|Seyma Sena Unsal|
-|264329002|Kerem Can Atlihan|
+|---|---|
+| Hakan Arik | 264329400 |
+| Seyma Sena Unsal | 264309004 |
+| Kerem Can Atlihan | 264329002 |
 
 
-- **Grup adı:** Banka Pazarlamasinda Abonelik Tahmini
+- **Grup adı:** Banka Pazarlamasında Abonelik Tahmini
 - **İletişim sorumlusu:** Kerem Can ATLIHAN / keremcan.atlihan@st.uskudar.edu.tr
-- **Grup tipi:** 3 kisi
+- **Grup tipi:** 3 kişi
 
 ## Soru
 
@@ -40,7 +41,7 @@ Planlanmış telefon görüşmesi başlamadan önce bilinen bilgiler, müşterin
 ├── proje1/
 │   └── BIL545_Proje1_Banka_Guncel.ipynb
 └── proje2/
-    └── [Proje 2 daha sonra eklenecek]
+    └── (Proje 2 aşamasında eklenecek)
 ```
 
 İndirilen defteri `proje1/` altına koyun. Grup adı netleşince dosya adı değiştirilebilir. `uretilen/` çalışma sırasında oluşur; CSV/ARFF/model dosyaları veri içerdiği için depoya eklemeyin. `.gitignore` içine `bank*.csv`, `uretilen/` ve `.ipynb_checkpoints/` ekleyin.
@@ -54,13 +55,13 @@ Planlanmış telefon görüşmesi başlamadan önce bilinen bilgiler, müşterin
 5. Sonuç dosyaları `uretilen/` altındadır: model, anlamsal temiz veri, bölme ve kat indeksleri, protokol, metrik tabloları, WEKA ARFF ve logları. Yalnız güvenilen kaynaklardan alınmış joblib dosyalarını yükleyin.
 6. Tümünü çalıştırın. Çıktılı aynı defteri GitHub ve STIX'e yükleyin.
 
-**Doğrulama kapsamı:** Kullanıcının sağladığı Colab defterinde 17 kod hücresi 1–17 sırasıyla tamamlanmış, kayıtlı hata çıktısı yok ve 12 WEKA kuralı kontrolü geçmiş. İnceleme kaydedilmiş çıktılara dayanır; Colab oturumu inceleyen tarafından yeniden çalıştırılmadı. Ortam: Python 3.13.18; numpy 2.4.6; pandas 2.2.3; sklearn 1.6.1; scipy 1.16.3. Tekrarlanan jupyter_client datetime uyarıları bazı çıktıları kalabalıklaştırıp ekran görünümünü kısaltmış; nihai tablolar ve kontroller kayıtlıdır.
+**Doğrulama kapsamı:** Önceki Colab defterinin kayıtlı çıktılarında 17 kod hücresi tamamlanmış görünmekte, kayıtlı hata çıktısı bulunmamakta ve WEKA kuralları için 12 kontrol başarılı olarak raporlanmaktadır. Bu bilgi kayıtlı çıktılarla sınırlıdır. **Bölüm 1'de sonradan yapılan kod değişikliklerinden sonra bütünleşik defterin tamamı Colab'da yeniden çalıştırılmalı; aşağıdaki sonuçlar ancak bu kontrolün ardından nihai kabul edilmelidir.** Önceki kayıtlı ortam: Python 3.13.18; numpy 2.4.6; pandas 2.2.3; sklearn 1.6.1; scipy 1.16.3.
 
 ## Sonuç özeti
 
 ### Proje 1 (vize)
 
-Aşağıdaki sayılar kullanıcının Colab’da çalıştırıp indirdiği defterin kayıtlı çıktılarından alınmıştır. Yeni bir model çalıştırması yapılmadı. Aynı geliştirme katlarında 5 kat × 2 tekrar kullanılıyor.
+Aşağıdaki sayılar önceki Colab defterinin kayıtlı çıktılarından alınmıştır; güncellenmiş Bölüm 1 kodunun bütünleşik son çalıştırma sonuçları değildir. Aynı geliştirme katlarında 5 kat × 2 tekrar kullanılmıştır.
 
 | Model | CV AP ortalama ± std |
 |---|---|
@@ -96,14 +97,18 @@ Henüz yapılmadı. Model, anlamsal veri, CV katları ve protokol aktarılabilir
 
 **Sınırlılıklar:** Müşteri kimliği ve tam tarih yok; kişi bazlı bölme yapılamaz. Zaman kayması büyük, kayıtlar eski ve tek bankadandır. Kurallar ve ileri dönemde ölçülen permütasyon önemi açıklama amaçlıdır; seçim için kullanılmaz ve keşifseldir. Performans, nedensellik veya adillik kanıtı değildir.
 
-## Katkı beyanı
+## Görev dağılımı ve katkı beyanı
 
-|264329400|Hakan Arik|1.Kisim
-|264309004|Seyma Sena Unsal|2.Kisim
-|264329002|Kerem Can Atlihan|Son Kisim
+Aşağıdaki tablo **bölüm sorumluluklarını** gösterir. Teslimde her üyenin gerçekten tamamladığı kod, analiz, yorum, denetim ve sunum alt başlıkları notebook'un katkı beyanında ayrıca yazılacak ve GitHub commit geçmişiyle eşleştirilecektir.
+
+| Üye | Öğrenci no | Sorumluluk |
+|---|---|---|
+| Hakan Arik | 264329400 | Proje 1 · Bölüm 1 (4.1: veri, ön işleme, sızıntı) |
+| Seyma Sena Unsal | 264309004 | Proje 1 · Bölüm 2 (4.2: sınıflandırma) |
+| Kerem Can Atlihan | 264329002 | Proje 1 · Bölüm 3 (4.3: veri küpü ve birliktelik) |
 
 
-
+## Ders materyalleriyle eşleme
 
 | Kod | Sağlanan dosya | İlgili slayt/sayfa | Projedeki karşılığı |
 |---|---|---|---|
@@ -115,8 +120,12 @@ Henüz yapılmadı. Model, anlamsal veri, CV katları ve protokol aktarılabilir
 | [D6] | BIL545_Hafta06_Siniflandirma.pdf | s.7, 9, 14, 18, 26–30, 35 | J48/CART, k-NN, dengeli doğruluk, ortak katlar |
 | [D7] | BIL545_Hafta07_Siniflandirma2.pdf | s.8, 12–13, 17, 19, 23–24, 30–45, 50–51 | Topluluklar, eğitim dışı önem, eşik/maliyet, nested CV, McNemar ve teslim kontrolü |
 
-**Bu sürümde değişenler:** Denetim tablosunda ölçüm ölçeği ve yalnız sayısal sıfır oranı; geliştirme betimlemesi/doldurma bedeli; dayanıklı ölçekleme duyarlılığı; ikincil dengeli doğruluk/duyarlılık/kesinlik; slice/dice ve ağırlıklı roll-up kontrolü; ileri dönemde permütasyon önemi; exact McNemar ile dersin χ² yaklaşımının karşılaştırması. Ek analizlerle ana model/parametre/eşik yeniden seçilmedi.
+**Önceki Colab sürümünde belgelenen değişiklikler:** Denetim tablosunda ölçüm ölçeği ve yalnız sayısal sıfır oranı; geliştirme betimlemesi/doldurma bedeli; dayanıklı ölçekleme duyarlılığı; ikincil dengeli doğruluk/duyarlılık/kesinlik; slice/dice ve ağırlıklı roll-up kontrolü; ileri dönemde permütasyon önemi; exact McNemar ile dersin χ² yaklaşımının karşılaştırması. Ek analizlerle ana model/parametre/eşik yeniden seçilmedi.
 
+
+## Yeniden çalıştırma ve teslim kontrolü
+
+Bölüm 1'deki nadir kategori kodlaması, ön işleme karşılaştırmaları ve baseline deneyi gözden geçirildiğinde metrikler yeniden üretilmelidir. Kod ve tabloların eski/yeni sürümleri birbirine karıştırılmamalıdır. Yönerge gereği yapay zekâ araçlarının kullanım amacı ve aşaması, proje defterindeki **Yapay zekâ beyanı** bölümünde gerçeğe uygun şekilde belirtilir.
 
 ## Kaynaklar
 
